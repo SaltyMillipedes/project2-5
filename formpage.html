@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Form page to fill out email and/or submit photo of endangered Californian insect."
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>Form Page</title>
+</head>
+<body>
+    <div id="top_nav">
+        <a href="index.html"
+          ><img
+            src="eic_logo.png"
+            alt="Endangered insects of California"
+            width="600"
+        /></a>
+        <nav id="nav_menu_mini">
+          <ul>
+            <li><a href="Lepidoptera.html">Lepidoptera</a></li>
+            <li><a href="Coleoptera.html">Coleoptera</a></li>
+            <li><a href="Diptera.html">Diptera</a></li>
+            <li><a href="Orthoptera.html">Orthoptera</a></li>
+            <li><a href="conservation.html">Conservation</a></li>
+            <li><a href="formpage.html">Other</a></li>
+          </ul>
+        </nav>
+      </div>
+        <br>
+        
+<form id="emil_form" action="survey.php" method="post">
+    <h2>Submit your email to recieve any updates or discoveres relating to California's endangered arthropods!</h2>
+    <label for="firstname" autofocus> 
+    First Name: </label>
+    <input type="text" id="firstname">
+    <br>
+    <label for="lastname"> 
+    Last Name: </label>
+    <input type="text" id="lastname">
+    <br>
+    <label for="email1"> 
+    Email: </label>
+    <input type="email" id="email1" required>
+    <br><br>
+    <input type="submit" id="button1" value="Register">
+    <input type="reset" name="reset" id="reset1">
+</form>
+<br>
+<form id="upload_form" action="sendemail.php" method="post" enctype="multipart/form-data">
+    <h2>If you believe you've taken a photo of an endangered species featured on this site, submit it here for a chance to be featured! </h2>
+    <h4> *Note: Images must be clear enough to identify. You must be the one who took the photo. All submissions will be subject for review, and may not be posted if deemed the wrong species or fraudulent.
+    </h4>
+    <label for="fullname"> 
+    Your full name: </label>
+    <input type="text" id="fullname" required>
+    <br>
+    <label for="location">
+    Location (Be as specific as possible): </label>
+    <input type="text" id="location" required>
+    <br>
+    <label for="datetime"> 
+    Time and Date found: </label>
+    <input type="datetime-local" id="datetime" required>
+    <br>
+    <label for="camera">
+    Camera or Phone used: </label>
+    <input type="text" id="camera" required>
+    <br>
+    <label for="email2"> 
+    Email (in case we need to contact you): </label>
+    <input type="email" id="email2" required>
+    <br>
+    <label for="comments"> 
+    Any other comments or information:<br> </label>
+    <textarea id="comments">
+    </textarea>
+    <br>
+    <label for="fileupload">
+    Attach photo:<br> </label>
+    <input type="file" id="fileupload" accept="image/jpeg, image/jpg, image/png" required>
+
+    <br><br>
+    <input type="submit" id="button2" value="Register">
+    <input type="reset" name="reset" id="reset2">
+</form>
+</body>
+
+</html>
